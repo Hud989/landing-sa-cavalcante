@@ -31,6 +31,17 @@
             transform: translate(-50%, -50%);
             object-fit: cover;
         }
+        .blob {
+            position: absolute;
+            filter: blur(40px);
+            z-index: -1;
+            opacity: 0.4;
+            animation: move 10s infinite alternate;
+        }
+        @keyframes move {
+            from { transform: translate(0, 0) scale(1); }
+            to { transform: translate(20px, -20px) scale(1.1); }
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased">
@@ -44,7 +55,7 @@
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#diferenciais" class="text-gray-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Diferenciais</a>
+                        <a href="#cases" class="text-gray-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Cases</a>
                         <a href="#solucoes" class="text-gray-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Soluções</a>
                         <a href="#shoppings" class="text-gray-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Shoppings</a>
                         <a href="#contato" class="bg-yellow-400 text-black hover:bg-yellow-300 px-4 py-2 rounded-full text-sm font-bold transition-all transform hover:scale-105">Anuncie Agora</a>
@@ -116,17 +127,91 @@
         </div>
     </section>
 
-    <!-- Trust / Partners -->
-    <section class="py-10 bg-white border-b border-gray-100">
+    <!-- Trust / Partners (Real Logos) -->
+    <section class="py-16 bg-white border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <p class="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-6">Grandes marcas que confiam na nossa mídia</p>
-            <div class="flex flex-wrap justify-center items-center gap-12 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-                <!-- Placeholders for Logos using Text for now -->
-                <span class="text-2xl font-bold text-gray-600">NATURA</span>
-                <span class="text-2xl font-bold text-gray-600">MRV</span>
-                <span class="text-2xl font-bold text-gray-600">COCA-COLA</span>
-                <span class="text-2xl font-bold text-gray-600">CLARO</span>
-                <span class="text-2xl font-bold text-gray-600">O BOTICÁRIO</span>
+            <p class="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-10">Grandes marcas que confiam na nossa mídia</p>
+            <div class="flex flex-wrap justify-center items-center gap-12 opacity-80 grayscale hover:grayscale-0 transition-all duration-500">
+                <img src="https://static.tildacdn.ink/tild6463-6264-4232-b537-646535333866/SO_JOO_2025_fotos_SM.png" alt="Supermercados BH" class="h-16 object-contain">
+                <img src="https://static.tildacdn.ink/tild3432-3335-4665-b036-333431623130/SO_JOO_2025_fotos_SM.png" alt="O Boticário" class="h-16 object-contain">
+                <img src="https://static.tildacdn.ink/tild6262-3961-4665-a163-616634316363/SO_JOO_2025_fotos_SM.png" alt="Terras Alphaville" class="h-16 object-contain">
+                <img src="https://static.tildacdn.ink/tild3933-3664-4334-a564-313064303335/SO_JOO_2025_fotos_SM.png" alt="Indus Corp" class="h-16 object-contain">
+                <img src="https://static.tildacdn.ink/tild6461-3439-4933-b666-313963373735/SO_JOO_2025_fotos_SM.png" alt="Óticas Carol" class="h-16 object-contain">
+                <img src="https://static.tildacdn.ink/tild3433-6632-4932-a532-656266393565/SO_JOO_2025_fotos_SM.png" alt="Vivo" class="h-16 object-contain">
+                <img src="https://static.tildacdn.ink/tild6231-6261-4434-b864-623163353361/SO_JOO_2025_fotos_SM.png" alt="McDonald's" class="h-16 object-contain">
+                <img src="https://static.tildacdn.ink/tild3938-3561-4931-b033-346432373737/SO_JOO_2025_fotos_SM.png" alt="Coca Cola" class="h-16 object-contain">
+            </div>
+        </div>
+    </section>
+
+    <!-- Cases de Sucesso (Prova Social - Movido para Cima) -->
+    <section id="cases" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900">Cases que <span class="text-yellow-500">Inspiram</span></h2>
+                <p class="mt-4 text-gray-500">Veja como grandes marcas criaram experiências memoráveis com nosso público.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Case 1: Natura -->
+                <div class="relative group overflow-hidden rounded-2xl shadow-lg bg-white h-96">
+                    <img src="https://static.tildacdn.ink/tild6232-3466-4233-b334-326261663737/SO_JOO_2025_fotos_SM.png" alt="Ativação Natura" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent flex flex-col justify-end p-8">
+                        <span class="text-yellow-400 font-bold text-xs tracking-wider uppercase mb-1">Rio Poty</span>
+                        <h3 class="text-xl font-bold text-white mb-2">Ativação Natura</h3>
+                        <p class="text-gray-300 text-sm line-clamp-3">Espaço de cuidado e conexão emocional para o Dia das Mães, atraindo alto fluxo e interação.</p>
+                    </div>
+                </div>
+
+                <!-- Case 2: Natal -->
+                <div class="relative group overflow-hidden rounded-2xl shadow-lg bg-white h-96">
+                    <img src="https://static.tildacdn.ink/tild3938-3661-4265-b530-636439373337/Design_sem_nome_-_20.png" alt="Natal Moxuara" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent flex flex-col justify-end p-8">
+                        <span class="text-yellow-400 font-bold text-xs tracking-wider uppercase mb-1">Moxuara</span>
+                        <h3 class="text-xl font-bold text-white mb-2">Natal Mágico</h3>
+                        <p class="text-gray-300 text-sm line-clamp-3">Grandes marcas ganharam protagonismo em ativações especiais no período mais estratégico do ano.</p>
+                    </div>
+                </div>
+
+                <!-- Case 3: Agita -->
+                <div class="relative group overflow-hidden rounded-2xl shadow-lg bg-white h-96">
+                    <img src="https://static.tildacdn.ink/tild6435-6532-4166-b933-323430373963/DSC02564_2.jpg" alt="Festival Agita" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent flex flex-col justify-end p-8">
+                        <span class="text-yellow-400 font-bold text-xs tracking-wider uppercase mb-1">Mestre Álvaro</span>
+                        <h3 class="text-xl font-bold text-white mb-2">Festival Agita</h3>
+                        <p class="text-gray-300 text-sm line-clamp-3">Movimento, energia e entretenimento que ampliou o tempo de permanência no shopping.</p>
+                    </div>
+                </div>
+
+                <!-- Case 4: Hogwarts -->
+                <div class="relative group overflow-hidden rounded-2xl shadow-lg bg-white h-96">
+                    <img src="https://static.tildacdn.ink/tild6662-3430-4931-a634-326538646231/Gemini_Generated_Ima.png" alt="Celebre Hogwarts" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent flex flex-col justify-end p-8">
+                        <span class="text-yellow-400 font-bold text-xs tracking-wider uppercase mb-1">Rio Poty</span>
+                        <h3 class="text-xl font-bold text-white mb-2">Celebre Hogwarts</h3>
+                        <p class="text-gray-300 text-sm line-clamp-3">Experiência imersiva que impulsionou o fluxo e encantou famílias inteiras.</p>
+                    </div>
+                </div>
+
+                <!-- Case 5: Samba -->
+                <div class="relative group overflow-hidden rounded-2xl shadow-lg bg-white h-96">
+                    <img src="https://static.tildacdn.ink/tild3166-6538-4734-b865-313266386538/Design_sem_nome_-_20.png" alt="Samba na Varanda" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent flex flex-col justify-end p-8">
+                        <span class="text-yellow-400 font-bold text-xs tracking-wider uppercase mb-1">Montserrat</span>
+                        <h3 class="text-xl font-bold text-white mb-2">Samba na Varanda</h3>
+                        <p class="text-gray-300 text-sm line-clamp-3">Evento social que consolidou o shopping como ponto de encontro e lazer.</p>
+                    </div>
+                </div>
+
+                <!-- Case 6: São João -->
+                <div class="relative group overflow-hidden rounded-2xl shadow-lg bg-white h-96">
+                    <img src="https://static.tildacdn.ink/tild3531-6366-4464-b462-333436363535/SO_JOO_2025_fotos_SM.png" alt="São João" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent flex flex-col justify-end p-8">
+                        <span class="text-yellow-400 font-bold text-xs tracking-wider uppercase mb-1">Metrópole</span>
+                        <h3 class="text-xl font-bold text-white mb-2">São João</h3>
+                        <p class="text-gray-300 text-sm line-clamp-3">Celebração da cultura nordestina que movimentou intensamente o shopping.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -134,11 +219,6 @@
     <!-- Diferenciais (Why Us) -->
     <section id="diferenciais" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">Mais do que Mídia, <br/><span class="text-yellow-500">Experiência e Resultado</span></h2>
-                <p class="mt-4 text-lg text-gray-500">Nossos shoppings são ecossistemas vivos. Aqui, sua marca não apenas aparece, ela participa da jornada do consumidor.</p>
-            </div>
-
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                 <!-- Card 1 -->
                 <div class="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-shadow duration-300 border border-gray-100">
@@ -235,7 +315,7 @@
         </div>
     </section>
 
-    <!-- Shoppings Grid -->
+    <!-- Shoppings Grid (Real Images) -->
     <section id="shoppings" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -244,12 +324,11 @@
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Shopping Item 1 -->
+                <!-- Shopping Item 1: Mestre Álvaro -->
                 <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow overflow-hidden group">
                     <div class="h-48 bg-gray-200 relative overflow-hidden">
-                        <!-- Placeholder for shopping image since we don't have specific ones -->
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1519567241046-7f570eee3c9f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Shopping Mestre Álvaro" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="https://static.tildacdn.ink/tild6265-6439-4630-b635-356138613364/WhatsApp-Image-2025-.webp" alt="Shopping Mestre Álvaro" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute bottom-4 left-4 z-20 text-white">
                             <h3 class="text-xl font-bold">Mestre Álvaro</h3>
                             <p class="text-sm opacity-90">Serra - ES</p>
@@ -263,11 +342,11 @@
                     </div>
                 </div>
 
-                 <!-- Shopping Item 2 -->
+                 <!-- Shopping Item 2: Montserrat -->
                  <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow overflow-hidden group">
                     <div class="h-48 bg-gray-200 relative overflow-hidden">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1567449303078-57ad431deba6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Shopping Montserrat" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="https://static.tildacdn.ink/tild3666-3666-4661-a631-623832643434/03-SMS.webp" alt="Shopping Montserrat" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute bottom-4 left-4 z-20 text-white">
                             <h3 class="text-xl font-bold">Montserrat</h3>
                             <p class="text-sm opacity-90">Serra - ES</p>
@@ -281,11 +360,11 @@
                     </div>
                 </div>
 
-                 <!-- Shopping Item 3 -->
+                 <!-- Shopping Item 3: Moxuara -->
                  <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow overflow-hidden group">
                     <div class="h-48 bg-gray-200 relative overflow-hidden">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1519566335946-e6f65f084552?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Shopping Moxuara" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="https://static.tildacdn.ink/tild3730-6238-4835-a536-303466656136/fotos_shoppings_2-05.png" alt="Shopping Moxuara" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute bottom-4 left-4 z-20 text-white">
                             <h3 class="text-xl font-bold">Moxuara</h3>
                             <p class="text-sm opacity-90">Cariacica - ES</p>
@@ -299,11 +378,11 @@
                     </div>
                 </div>
 
-                 <!-- Shopping Item 4 -->
+                 <!-- Shopping Item 4: Rio Poty -->
                  <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow overflow-hidden group">
                     <div class="h-48 bg-gray-200 relative overflow-hidden">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1555529733-0e670560f7e1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Rio Poty" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="https://static.tildacdn.ink/tild6463-6266-4837-b939-613938386563/05-SRP.webp" alt="Rio Poty" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute bottom-4 left-4 z-20 text-white">
                             <h3 class="text-xl font-bold">Rio Poty</h3>
                             <p class="text-sm opacity-90">Teresina - PI</p>
@@ -317,11 +396,11 @@
                     </div>
                 </div>
 
-                 <!-- Shopping Item 5 -->
+                 <!-- Shopping Item 5: Shopping da Ilha -->
                  <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow overflow-hidden group">
                     <div class="h-48 bg-gray-200 relative overflow-hidden">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1581337204873-ef36aa186caa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Shopping da Ilha" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="https://static.tildacdn.ink/tild3836-3466-4238-b364-366165313430/Design-sem-nome-2025.webp" alt="Shopping da Ilha" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute bottom-4 left-4 z-20 text-white">
                             <h3 class="text-xl font-bold">Shopping da Ilha</h3>
                             <p class="text-sm opacity-90">São Luís - MA</p>
@@ -335,11 +414,11 @@
                     </div>
                 </div>
 
-                 <!-- Shopping Item 6 -->
+                 <!-- Shopping Item 6: Metrópole -->
                  <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow overflow-hidden group">
                     <div class="h-48 bg-gray-200 relative overflow-hidden">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1519451241324-1110798c0d05?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Metrópole Ananindeua" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="https://static.tildacdn.ink/tild6434-6135-4635-b733-303130613938/071_SMT.png" alt="Metrópole Ananindeua" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute bottom-4 left-4 z-20 text-white">
                             <h3 class="text-xl font-bold">Metrópole</h3>
                             <p class="text-sm opacity-90">Ananindeua - PA</p>
@@ -350,48 +429,6 @@
                         <a href="#contato" class="text-yellow-600 font-bold text-sm hover:text-yellow-500 flex items-center">
                             Anunciar aqui <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                         </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Cases de Sucesso -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-gray-900">Cases que <span class="text-yellow-500">Inspiram</span></h2>
-                <p class="mt-4 text-gray-500">Veja como grandes marcas se conectaram com nosso público.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Case 1 -->
-                <div class="relative group overflow-hidden rounded-2xl">
-                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Ativação Natura" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-8">
-                        <span class="text-yellow-400 font-bold text-sm tracking-wider uppercase mb-2">Rio Poty</span>
-                        <h3 class="text-2xl font-bold text-white mb-2">Ativação Natura</h3>
-                        <p class="text-gray-300 text-sm line-clamp-3">Espaço de cuidado e conexão emocional para o Dia das Mães, atraindo alto fluxo e interação.</p>
-                    </div>
-                </div>
-
-                <!-- Case 2 -->
-                <div class="relative group overflow-hidden rounded-2xl">
-                    <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Natal Moxuara" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-8">
-                        <span class="text-yellow-400 font-bold text-sm tracking-wider uppercase mb-2">Moxuara</span>
-                        <h3 class="text-2xl font-bold text-white mb-2">Natal Mágico</h3>
-                        <p class="text-gray-300 text-sm line-clamp-3">Grandes marcas ganharam protagonismo em ativações especiais no período mais estratégico do ano.</p>
-                    </div>
-                </div>
-
-                <!-- Case 3 -->
-                <div class="relative group overflow-hidden rounded-2xl">
-                    <img src="https://images.unsplash.com/photo-1533174072545-e8d4aa97edf9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Festival Agita" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-8">
-                        <span class="text-yellow-400 font-bold text-sm tracking-wider uppercase mb-2">Mestre Álvaro</span>
-                        <h3 class="text-2xl font-bold text-white mb-2">Festival Agita</h3>
-                        <p class="text-gray-300 text-sm line-clamp-3">Movimento, energia e entretenimento que ampliou o tempo de permanência no shopping.</p>
                     </div>
                 </div>
             </div>
@@ -470,9 +507,9 @@
                 </div>
                 <div class="flex space-x-6 text-sm text-gray-400">
                     <a href="#" class="hover:text-yellow-400 transition-colors">Sobre</a>
-                    <a href="#" class="hover:text-yellow-400 transition-colors">Shoppings</a>
+                    <a href="#shoppings" class="hover:text-yellow-400 transition-colors">Shoppings</a>
                     <a href="#" class="hover:text-yellow-400 transition-colors">Mídia Kit</a>
-                    <a href="#" class="hover:text-yellow-400 transition-colors">Contato</a>
+                    <a href="#contato" class="hover:text-yellow-400 transition-colors">Contato</a>
                 </div>
             </div>
             <div class="mt-8 border-t border-gray-800 pt-8 text-center md:text-left text-sm text-gray-600 flex flex-col md:flex-row justify-between">
